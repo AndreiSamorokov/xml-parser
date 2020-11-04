@@ -5,10 +5,10 @@ function App() {
   const [xmlvalue, setXmlvalue] = useState([]);
   
   showList();
-
+  
   function showList() { 
     fetch(
-      `https://cors-anywhere.herokuapp.com/https://www.freelancer.com/rss.xml`
+      `https://www.freelancer.com/rss.xml`
     )
     .then(response => {
       return response.text();
