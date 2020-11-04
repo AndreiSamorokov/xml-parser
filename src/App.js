@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Typography from '@material-ui/core/Typography'
 import Appbar from '@material-ui/core/AppBar'
+import Brightness7Icon from '@material-ui/icons/Brightness7';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
   return (
     <div>
       <Appbar>
+        <Brightness7Icon />
         <Typography variant="h5" > Freelancer Feed </Typography>
       </Appbar>
       {/* <button onClick={(e)=>showList()} >Show Job List</button> */}
