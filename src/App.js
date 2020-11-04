@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+import Typography from '@material-ui/core/Typography'
+import Appbar from '@material-ui/core/AppBar'
+
+
 function App() {
   
   const [xmlvalue, setXmlvalue] = useState([]);
@@ -8,7 +12,7 @@ function App() {
   
   function showList() { 
     fetch(
-      `https://www.freelancer.com/rss.xml`
+      `https://cors-anywhere.herokuapp.com/https://www.freelancer.com/rss.xml`
     )
     .then(response => {
       return response.text();
@@ -25,7 +29,10 @@ function App() {
   }
  
   return (
-    <div> 
+    <div>
+      <Appbar>
+        <Typography variant="h5" > Freelancer Feed </Typography>
+      </Appbar>
       {/* <button onClick={(e)=>showList()} >Show Job List</button> */}
       {xmlvalue.map((item, key) => (
         <ul key={ key }>
