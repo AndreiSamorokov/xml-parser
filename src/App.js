@@ -4,6 +4,8 @@ function App() {
   
   const [xmlvalue, setXmlvalue] = useState([]);
   
+  showList();
+
   function showList() { 
     fetch(
       `https://cors-anywhere.herokuapp.com/https://www.freelancer.com/rss.xml`
@@ -24,7 +26,7 @@ function App() {
  
   return (
     <div> 
-      <button onClick={(e)=>showList()} >Show Job List</button>
+      {/* <button onClick={(e)=>showList()} >Show Job List</button> */}
       {xmlvalue.map((item, key) => (
         <ul key={ key }>
             <li >{ item.children[key].value }</li>
